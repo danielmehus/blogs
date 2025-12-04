@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Looking Glass Magazine</title>
-  <meta name="description" content="One-page, hyper minimalist website for The Looking Glass Magazine." />
+
   <style>
     :root {
-      --bg: #f9fafb;
-      --fg: #111827;
-      --muted: #6b7280;
-      --accent: #047857; /* muted green */
-      --border: #e5e7eb;
+      --bg: #0f1011;          /* deep charcoal */
+      --fg: #e5e5e5;          /* soft light gray */
+      --muted: #9ca3af;       /* muted gray */
+      --border: #2a2c2e;      /* low-contrast divider */
+      --accent: #3b8f6b;      /* muted, darker green */
       --maxw: 40rem;
       --pad: clamp(20px, 5vw, 40px);
       --gap: 24px;
@@ -20,14 +20,12 @@
 
     * { box-sizing: border-box; }
 
-    html, body { height: 100%; }
-
     body {
       margin: 0;
       background: var(--bg);
       color: var(--fg);
-      font: 15px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Helvetica, Arial, sans-serif;
+      font: 15px/1.65 system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -57,9 +55,10 @@
     h1 {
       margin: 0;
       font-size: clamp(24px, 3vw, 32px);
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.01em;
       font-weight: 600;
+      color: var(--fg);
     }
 
     .tagline {
@@ -72,6 +71,7 @@
       font-size: 0.95rem;
       line-height: var(--lead);
       max-width: 36rem;
+      color: var(--fg);
     }
 
     section {
@@ -92,7 +92,7 @@
       padding: 0;
       margin: 10px 0 0;
       display: grid;
-      gap: 4px;
+      gap: 6px;
     }
 
     a {
@@ -133,27 +133,13 @@
       justify-content: space-between;
       gap: 8px;
     }
-
-    @media print {
-      body {
-        background: #ffffff;
-        color: #000000;
-      }
-      .wrap {
-        align-items: flex-start;
-      }
-      main {
-        max-width: 42rem;
-      }
-      a {
-        text-decoration: underline;
-      }
-    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <main>
+
       <header>
         <h1>The Looking Glass Magazine</h1>
         <span class="tagline">Courtesy of the Looking Glass Collective</span>
@@ -165,43 +151,26 @@
         commodification and can be experienced on its own terms.
       </p>
 
-      <!-- View (Google Drive) -->
       <section aria-label="View online">
         <h2>View</h2>
         <ul>
-          <li><a class="link" href="https://drive.google.com/file/d/1Rj8Z4txBUlJaB5tZja5uO4TfZKqwWQyE/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 11, Fall 2025</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1TPAjkwA4Pw_EwItEHCpH-qFkDB2c_swi/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 10, Summer 2025</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1QcAMW9cXeYHTurDIDzygElXUOngFsjeM/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 9, Spring 2025 <span class="tag">download to view</span></a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1hEjNfB6p-TkW2YtHbuGshrKuHnRHd8u7/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 8, Winter 2024</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1uf2YavaIhUu-znnTbPXPwz86lljBKh2a/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 7, Fall 2024</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1soSZ0RYYXhEJ1pLLlvzypNVhw0gdpcd0/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 6, Summer 2024 <span class="tag">download to view</span></a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1AgcEJO9FAOHBfFRbZJSjYV-IVVkEaB0y/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 5, Spring 2024</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1-jpvSFNxI58DhwOwzA9U03xblvlGJcs5/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 4, Winter 2023</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1G8bQYZ72sG_ilM2VYE5czlgpBbneu7Mb/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 3, Fall 2023</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1c2BDNg882sFWzQSOvUwXhpJExhmKFwyj/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 2, Summer 2023</a></li>
-          <li><a class="link" href="https://drive.google.com/file/d/1U-cWz4jeW190ckRcsWFznkcbdVfwSpd8/view?usp=drive_link" target="_blank" rel="noopener">The Looking Glass Vol. 1, Spring 2023</a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 11, Fall 2025</a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 10, Summer 2025</a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 9, Spring 2025 <span class="tag">download to view</span></a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 8, Winter 2024</a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 7, Fall 2024</a></li>
         </ul>
       </section>
 
-      <!-- Download (GitHub) -->
       <section aria-label="Download PDFs">
         <h2>Download</h2>
         <ul>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v11.0/The.Looking.Glass.Vol.11.Fall.2025.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 11, Fall 2025 <span class="tag">70.8&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v10.0/The.Looking.Glass.Vol.10.Summer.2025.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 10, Summer 2025 <span class="tag">68.6&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v9.0/The.Looking.Glass.Vol.9.Spring.2025.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 9, Spring 2025 <span class="tag">104.3&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v8.0/The.Looking.Glass.vol.8.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 8, Winter 2024 <span class="tag">77.6&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v7.0/The.looking.glass.vol.7.fall.2024.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 7, Fall 2024 <span class="tag">41.7&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v6.0/The.Looking.Glass.Vol.6.Summer.2024.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 6, Summer 2024 <span class="tag">126.4&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v5.0/The.Looking.Glass.Vol.5.Spring.2024.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 5, Spring 2024 <span class="tag">38.8&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v4.0/The.Looking.Glass.Vol.4.Winter.2023.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 4, Winter 2023 <span class="tag">64.4&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v3.0/The.Looking.Glass.Vol.3.Fall.2023.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 3, Fall 2023 <span class="tag">63.8&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v2.0/The.Looking.Glass.Vol.2.Summer.2023.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 2, Summer 2023 <span class="tag">53.5&nbsp;MB</span></a></li>
-          <li><a class="link" href="https://github.com/danielmehus/lookingglass/releases/download/v1.0/The.Looking.Glass.Vol.1.Spring.2023.pdf" target="_blank" rel="noopener" type="application/pdf">The Looking Glass Vol. 1, Spring 2023 <span class="tag">60.8&nbsp;MB</span></a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 11, Fall 2025 <span class="tag">70.8 MB</span></a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 10, Summer 2025 <span class="tag">68.6 MB</span></a></li>
+          <li><a class="link" href="#">The Looking Glass Vol. 9, Spring 2025 <span class="tag">104.3 MB</span></a></li>
         </ul>
       </section>
 
-      <!-- Contact as simple line -->
       <section aria-label="Contact">
         <h2>Contact</h2>
         <p style="margin: 10px 0 0; max-width: 32rem;">
@@ -212,8 +181,8 @@
 
       <footer>
         <span>© 2025 The Looking Glass Collective</span>
-        <span></span>
       </footer>
+
     </main>
   </div>
 </body>
